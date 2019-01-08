@@ -58,7 +58,7 @@ env: {}
 
 metrics:
   serviceMonitor:
-    enabled: true
+    enabled: false
     additionalLabels: {}
   alertRulesEnabled: false
 
@@ -158,7 +158,7 @@ configuration:
     maintenanceWindowMinute: 15
 
   # Pipeline infra environment related settings
-  infra_:
+  infra:
     namespace: pipeline-system
 
     # Name of the node pool reserved for infra deployments

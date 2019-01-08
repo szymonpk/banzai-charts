@@ -5,9 +5,9 @@
 # These global variables will be passed as env variables therefore it will overwrite configuration changes
 global:
   auth:
-    clientid: "aaaa"
-    clientsecret: "aaaa"
-    tokensigningkey: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    clientid: ""
+    clientsecret: ""
+    tokensigningkey: ""
   pipelineBasepath: /pipeline
 
 github:

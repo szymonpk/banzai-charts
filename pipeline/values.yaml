@@ -2,10 +2,12 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+# These global variables will be passed as env variables therefore it will overwrite configuration changes
 global:
   auth:
     clientid: ""
     clientsecret: ""
+  pipelineBaseBath: /pipeline
 
 github:
   token: ""
@@ -90,7 +92,7 @@ configuration:
     autoMigrateEnabled: false
 
   anchore:
-    enabled: true
+    enabled: false
     serviceEndpoint: ""
 
   logging:

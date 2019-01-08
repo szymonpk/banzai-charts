@@ -10,6 +10,13 @@ global:
     tokensigningkey: ""
   pipelineBasepath: /pipeline
 
+database:
+  # Vault role
+  role: ""
+  dbname: pipeline
+  logging: true
+  autoMigrateEnabled: true
+
 github:
   token: ""
 
@@ -78,13 +85,6 @@ configuration:
     # Use to redirect url after login
     uipath: http://localhost:4200/ui
     signupRedirectPath: http://localhost:4200/ui
-
-  database:
-    # Vault role
-    role: ""
-    dbname: pipeline
-    logging: true
-    autoMigrateEnabled: true
 
   anchore:
     enabled: false
@@ -213,10 +213,6 @@ configuration:
   spotmetrics:
     enabled: false
     collectionInterval: 30s
-
-  cert:
-    source: file
-    path: /sign-ca
 
 cache:
   persistence:

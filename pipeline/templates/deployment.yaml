@@ -66,6 +66,15 @@ spec:
         - name: PIPELINE_PIPELINE_BASEPATH
           value: {{ .Values.global.pipelineBasepath | quote }}
 
+        - name: PIPELINE_DATABASE_DBNAME
+          value: {{ .Values.database.dbname }}
+        - name: PIPELINE_DATABASE_ROLE
+          value: {{ .Values.database.role }}
+        - name: PIPELINE_DATABASE_LOGGING
+          value: {{ .Values.database.logging }}
+        - name: PIPELINE_DATABASE_AUTOMIGRATEENABLED
+          value: {{ .Values.database.autoMigrateEnabled }}
+
         {{- if .Values.mysql.enabled  }}
         - name: PIPELINE_DATABASE_HOST
           value: {{ .Release.Name }}-pipeline-db

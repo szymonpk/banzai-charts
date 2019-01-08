@@ -5,9 +5,10 @@
 # These global variables will be passed as env variables therefore it will overwrite configuration changes
 global:
   auth:
-    clientid: ""
-    clientsecret: ""
-  pipelineBaseBath: /pipeline
+    clientid: "aaaa"
+    clientsecret: "aaaa"
+    tokensigningkey: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  pipelineBasepath: /pipeline
 
 github:
   token: ""
@@ -80,10 +81,10 @@ configuration:
 
   database:
     # Vault role
-    role: pipeline
+    role: ""
     dbname: pipeline
     logging: true
-    autoMigrateEnabled: false
+    autoMigrateEnabled: true
 
   anchore:
     enabled: false

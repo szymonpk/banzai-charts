@@ -71,9 +71,9 @@ spec:
         - name: PIPELINE_DATABASE_ROLE
           value: {{ .Values.database.role }}
         - name: PIPELINE_DATABASE_LOGGING
-          value: {{ .Values.database.logging }}
+          value: {{ .Values.database.logging | quote }}
         - name: PIPELINE_DATABASE_AUTOMIGRATEENABLED
-          value: {{ .Values.database.autoMigrateEnabled }}
+          value: {{ .Values.database.autoMigrateEnabled | quote }}
 
         {{- if .Values.mysql.enabled  }}
         - name: PIPELINE_DATABASE_HOST

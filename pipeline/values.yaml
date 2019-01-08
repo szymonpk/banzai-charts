@@ -49,16 +49,10 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-database:
-   dialect: mysql
-   host: localhost
-   port: 3306
-   user: admin
-   password: ""
-
 env: {}
 
 metrics:
+  enabled: false
   serviceMonitor:
     enabled: false
     additionalLabels: {}
@@ -206,7 +200,6 @@ configuration:
     sharedLibraryGitHubOrganization: spotguides
 
   metrics:
-    enabled: false
     port: :9900
     # if true, some metrics have unique labels
     debug: true
